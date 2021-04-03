@@ -42,8 +42,6 @@ const ToolBar = (props) => {
     }, 3000)
   }
 
-  console.log(context)
-
   return (
     <div className={classes.root}>
       <AppBar position="static">
