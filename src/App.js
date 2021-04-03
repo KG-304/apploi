@@ -1,6 +1,6 @@
 import React from 'react';
 import ToolBar from './atoms/toolbar';
-import Login from './molecules/login';
+import Login from './molecules/login/login';
 
 function App() {
   return (
