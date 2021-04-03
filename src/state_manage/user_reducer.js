@@ -1,8 +1,8 @@
-const updateBearer = (firstName, state) => {
+const updateFirstName = (firstName, state) => {
     return { ...state, firstName: firstName };
 };
 
-const updateBearer = (lastName, state) => {
+const updateLastName = (lastName, state) => {
     return { ...state, lastName: lastName };
 };
 
@@ -14,7 +14,7 @@ export const UserReducer = (state, action) => {
     switch (action.type) {
         case "update-first-name":
             return updateFirstName(action.firstName, state);
-        case "update-first-name":
+        case "update-last-name":
             return updateLastName(action.lastName, state);
         case "update-email":
             return updateEmail(action.email, state);

@@ -1,6 +1,6 @@
 import React, { useReducer } from "react";
-import UserContext from "./userContext";
-import { UserReducer } from "./userReducer.js";
+import user_context from "./user_context";
+import { UserReducer } from "./user_reducer.js";
 
 const GlobalState = props => {
     const user = {
@@ -11,12 +11,12 @@ const GlobalState = props => {
 
     const [userState, dispatch] = useReducer(UserReducer, user);
 
-    const updateFirstName = bearer => {
-        dispatch({ type: "update-first-name", bearer });
+    const updateFirstName = firstName => {
+        dispatch({ type: "update-first-name", firstName });
     };
 
-    const updateLastName = bearer => {
-        dispatch({ type: "update-lasy-name", bearer });
+    const updateLastName = lastName => {
+        dispatch({ type: "update-last-name", lastName });
     };
 
     const updateEmail = email => {
@@ -24,7 +24,7 @@ const GlobalState = props => {
     };
 
     return (
-        <UserContext.Provider
+        <user_context.Provider
             value={{
                 user: userState,
                 updateFirstName: updateFirstName,
@@ -33,7 +33,7 @@ const GlobalState = props => {
             }}
         >
             {props.children}
-        </UserContext.Provider>
+        </user_context.Provider>
     );
 };
 

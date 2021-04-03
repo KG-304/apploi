@@ -1,10 +1,11 @@
 import { useState, useContext } from 'react'
-import { Button, Dialog, Input, Modal, TextField } from "@material-ui/core"
+import { Button, Modal, TextField } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles";
-import UserContext from "../../state_manage/user_context";
+import user_context from "../../state_manage/user_context";
 import { Backdrop } from "@material-ui/core";
 import Fade from '@material-ui/core/Fade';
 import { checkEmail, checkName } from './loginHelper'
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -65,15 +66,23 @@ const useStyles = makeStyles(theme => ({
 
 const Login = () => {
     const classes = useStyles();
-    const context = useContext(UserContext);
+    const context = useContext(user_context);
+    const history = useHistory();
     const [email, setEmail] = useState("");
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
-
+    const [load, setLoad] = useState(false)
 
     const validate = () => {
         if (checkEmail(email) && checkName(firstName) && checkName(lastName)) {
-            window.alert("All set!")
+            setLoad(true)
+            window.setTimeout(() => { //simulate API
+                context.updateEmail(email);
+                context.updateFirstName(firstName);
+                context.updateLastName(lastName);
+                history.push("/home");
+                setLoad(false);
+            }, 3000)
         }
     }
 
@@ -88,7 +97,8 @@ const Login = () => {
                 BackdropComponent={Backdrop}
                 BackdropProps={{
                     timeout: 500,
-                    className: classes.backdrop
+                    className: classes.backdrop,
+                    title: <span>Loading</span>
                 }}
             >
                 <>
@@ -100,6 +110,7 @@ const Login = () => {
                                 <TextField required className={classes.input} error={!checkName(firstName)} onChange={event => setFirstName(event.target.value)} value={firstName} placeholder="Please input a valid first name" id="filled-basic" label="First Name" variant="filled" />
                                 <TextField required className={classes.input} error={!checkName(lastName)} onChange={event => setLastName(event.target.value)} value={lastName} placeholder="Please input a valid last name" id="filled-basic" label="Last Name" variant="filled" />
                                 <Button onClick={() => validate()} className={classes.button}>Submit</Button>
+                                <span>{load ? "Loading..." : null}</span>
                             </ul>
                         </div>
                     </Fade>

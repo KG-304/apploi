@@ -1,12 +1,12 @@
 import React from 'react';
-import ToolBar from './atoms/toolbar';
-import Login from './molecules/login/login';
+import RouterBoss from './router/router_boss';
+import GlobalState from './state_manage/global_state';
 
-function App() {
+const App = () => {
   return (
-    <div className="app-container">
-      <Login />
-    </div>
+    <GlobalState>
+      <RouterBoss />
+    </GlobalState>
   );
 }
 

@@ -10,10 +10,13 @@ export const checkEmail = (email) => {
 export const checkName = (name) => {
     let check = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
     if (check.test(name)) {
-        return true
+        return false
+    }
+    else if (name === "") {
+        return false;
     }
     else {
-        return false;
+        return true;
     }
 
 }
