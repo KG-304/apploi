@@ -76,7 +76,7 @@ const Login = () => {
     const validate = () => {
         if (checkEmail(email) && checkName(firstName) && checkName(lastName)) {
             setLoad(true)
-            window.setTimeout(() => { //simulate API
+            window.setTimeout(() => { //simulate API, typically would use promise based library Axios.
                 context.updateEmail(email);
                 context.updateFirstName(firstName);
                 context.updateLastName(lastName);
@@ -106,11 +106,11 @@ const Login = () => {
                         <div>
                             <ul style={{ listStyle: 'none' }}>
                                 <span className={classes.title}>Welcome, please provide your email, first, and last name:</span>
-                                <TextField required className={classes.input} error={!checkEmail(email)} onChange={event => setEmail(event.target.value)} type="email" value={email} placeholder="Please input a valid email" id="filled-basic" label="Email" variant="filled" />
-                                <TextField required className={classes.input} error={!checkName(firstName)} onChange={event => setFirstName(event.target.value)} value={firstName} placeholder="Please input a valid first name" id="filled-basic" label="First Name" variant="filled" />
-                                <TextField required className={classes.input} error={!checkName(lastName)} onChange={event => setLastName(event.target.value)} value={lastName} placeholder="Please input a valid last name" id="filled-basic" label="Last Name" variant="filled" />
+                                <TextField required className={classes.input} error={!checkEmail(email)} onChange={event => setEmail(event.target.value)} type="email" value={email} placeholder="email@email.com" id="filled-basic" label="Email" variant="filled" />
+                                <TextField required className={classes.input} error={!checkName(firstName)} onChange={event => setFirstName(event.target.value)} value={firstName} placeholder="Name" id="filled-basic" label="First Name" variant="filled" />
+                                <TextField required className={classes.input} error={!checkName(lastName)} onChange={event => setLastName(event.target.value)} value={lastName} placeholder="Name" id="filled-basic" label="Last Name" variant="filled" />
                                 <Button onClick={() => validate()} className={classes.button}>Submit</Button>
-                                <span>{load ? "Loading..." : null}</span>
+                                <span style={{ display: 'block', margin: '3%' }}>{load ? "Loading..." : null}</span>
                             </ul>
                         </div>
                     </Fade>

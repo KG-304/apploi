@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "../ecosystems/home_page/home";
-import LandingPage from "../ecosystems/landing_page/landing";
+import Home from "../ecosystems/home/home";
+import LandingPage from "../ecosystems/landing/landing";
 
 
 const RouterBoss = () => {

@@ -8,7 +8,7 @@ export const checkEmail = (email) => {
 };
 
 export const checkName = (name) => {
-    let check = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+    let check = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~0-9]/;
     if (check.test(name)) {
         return false
     }
