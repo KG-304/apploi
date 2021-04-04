@@ -17,16 +17,20 @@
         "resume": "resume_name.pdf",
         "relevantSkills": [
             {
-                "skill": "testSkill"
+                "skill": "testSkill",
+                "exp": 3
             },
             {
-                "skill": "testSkill"
+                "skill": "testSkill",
+                "exp": 3
             },
             {
-                "skill": "testSkill"
+                "skill": "testSkill",
+                "exp": 3
             },
             {
-                "skill": "testSkill"
+                "skill": "testSkill",
+                "exp": 3
             }
         ],
         "education": {

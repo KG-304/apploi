@@ -15,7 +15,7 @@ const ProfilePage = () => {
         <div className="profile">
             <ToolBar />
             <ProfileHeader person={data} />
-            <ProfileBody />
+            <ProfileBody person={data} />
         </div>
     )
 }

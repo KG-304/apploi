@@ -8,7 +8,7 @@ const ShowResults = () => {
     useEffect(() => { // Simulate API call, would typically use promise based library axios.
         window.setTimeout(() => {
             setData(data)
-        }, 2000)
+        }, 1000)
     }, [])
 
     return (
