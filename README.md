@@ -5,3 +5,9 @@
   - Component Design: https://material-ui.com/
   - The design is not that great. If I would have spent a little more time create wireframes with Sketch, or Storybook, the design would be much better.
   - Typically, I would create multiple branches defining a feature/story within that branch. For example, if I wanted to implement react-router into my app. Typically, I would create a branch off of the dev branch named, implement-react-router. When the implement-react-router branch would be considered complete, it would then be merged back into dev branch.
+
+### To-do's: 
+  - Implement error handling.
+  - 100% responsive.
+  - Add real API.
+  - Loading screens.
