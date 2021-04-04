@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import ProfileBody from '../../atoms/profile_body/profile_body';
 import ProfileHeader from '../../atoms/profile_header/profile_header';
 import ToolBar from '../../atoms/toolbar/toolbar';
 import { data } from '../../test_data/single_user.json'
@@ -14,6 +15,7 @@ const ProfilePage = () => {
         <div className="profile">
             <ToolBar />
             <ProfileHeader person={data} />
+            <ProfileBody />
         </div>
     )
 }
