@@ -32,14 +32,12 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const ToolBar = (props) => {
+const ToolBar = () => {
   const history = useHistory();
   const classes = useStyles();
   const context = useContext(user_context);
   const [anchorEl, setAnchorEl] = useState(null);
-  const { email } = context.user;
-  const { firstName } = context.user;
-  const { lastName } = context.user;
+  const { firstName, lastName, email } = context.user;
 
   const logOut = () => { // Typically would use promise based library Axios.
     window.setTimeout(() => {
