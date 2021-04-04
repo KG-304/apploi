@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import ResumeIcon from '../../atoms/icons/resume_icon'
+import ResumeIcon from '../../atoms/resume_icon/resume_icon'
 import { data } from '../../test_data/people_init.json'
 
 const ShowResults = () => {

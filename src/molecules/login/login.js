@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import user_context from "../../state_manage/user_context";
 import { Backdrop } from "@material-ui/core";
 import Fade from '@material-ui/core/Fade';
-import { checkEmail, checkName } from './loginHelper'
+import { checkEmail, checkName } from './login_helper'
 import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({

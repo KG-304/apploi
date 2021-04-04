@@ -6,7 +6,7 @@ const ResumeIcon = (props) => {
     const { firstName, lastName, yearsExperience, id } = props.resume;
 
     return (
-        <Link to={`/profile:${id}`} style={{ textDecoration: 'none' }}>
+        <Link to={`/profile:${id}`}>
             <div className="resume-icon">
                 <ul>
                     <li>{firstName} {lastName}</li>
