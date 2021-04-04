@@ -9,8 +9,7 @@
                 "street": "551 East West",
                 "zipCode": 11111
             },
-            "yearsExperience": 12,
-            "profileImg": "../profile/profile_pic.jpg"
+            "yearsExperience": 12
         },
         {
             "firstName": "Lorna",
@@ -22,7 +21,6 @@
                 "zipCode": 11111
             },
             "yearsExperience": 9,
-            "profileImg": "../profile/profile_pic.jpg"
         },
         {
             "firstName": "Karl",
@@ -78,7 +76,6 @@
                 "zipCode": 11111
             },
             "yearsExperience": 12,
-            "profileImg": "../profile/profile_pic.jpg"
         },
         {
             "firstName": "Harry",
