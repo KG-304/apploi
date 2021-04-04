@@ -20,7 +20,7 @@
                 "street": "551 East West",
                 "zipCode": 11111
             },
-            "yearsExperience": 9,
+            "yearsExperience": 9
         },
         {
             "firstName": "Karl",
@@ -75,7 +75,7 @@
                 "street": "551 East West",
                 "zipCode": 11111
             },
-            "yearsExperience": 12,
+            "yearsExperience": 12
         },
         {
             "firstName": "Harry",
